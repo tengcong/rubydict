@@ -1,0 +1,1 @@
+require 'rubydict/mixbox/translator'
