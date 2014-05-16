@@ -3,6 +3,9 @@ require 'rubydict'
 describe Rubydict::MixBox::Dictionary do
   it "should load so file" do
     Rubydict::MixBox::Dictionary.should be_respond_to(:lookup)
+
+    puts Rubydict::MixBox::Dictionary.clib_path
+
   end
 end
 

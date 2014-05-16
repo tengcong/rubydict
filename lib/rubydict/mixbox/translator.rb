@@ -4,8 +4,14 @@ module Rubydict
   module MixBox
     module Dictionary
       extend FFI::Library
-      ffi_lib "clib/liblookup.so"
+
+      def self.clib_path
+        File.expand_path("#{__FILE__}/../../../../clib/liblookup.so")
+      end
+
+      ffi_lib clib_path
       attach_function :lookup, [:string, :long, :long, :string], :string
+
     end
 
     class Translator
